@@ -1,0 +1,5 @@
+.env
+/mysqlDB
+.vscode/*
+data_export.xlsx
+__pycache__

@@ -1,0 +1,15 @@
+
+  version: '3'
+
+  services:
+    db:
+      image: mysql:latest
+      restart: always
+      ports:
+        - ${DB_PORT}:3306
+      environment:
+        MYSQL_DATABASE: ${DB_NAME}
+        MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      container_name: paymentsDB
+      volumes:
+        - ./mysqlDB:/var/lib/mysql
